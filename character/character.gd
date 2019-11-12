@@ -1,10 +1,10 @@
 extends KinematicBody2D
 
-const GRAVITY_VEC = Vector2(0, 900)
+const GRAVITY_VEC = Vector2(0, 1800)
 const FLOOR_NORMAL = Vector2(0, -1)
-const SLOPE_SLIDE_STOP = 50.0
-const WALK_SPEED = 250 # pixels/sec
-const JUMP_SPEED = 600
+const SLOPE_SLIDE_STOP = 100.0
+const WALK_SPEED = 500 # pixels/sec
+const JUMP_SPEED = 750
 const SIDING_CHANGE_SPEED = 10
 
 var linear_vel = Vector2()
@@ -48,11 +48,11 @@ func _physics_process(delta):
 	if on_floor:
 		if linear_vel.x < -SIDING_CHANGE_SPEED:
 			sprite.scale.x = -1
-			new_anim = "run"
+			new_anim = "running"
 
 		if linear_vel.x > SIDING_CHANGE_SPEED:
 			sprite.scale.x = 1
-			new_anim = "run"
+			new_anim = "running"
 	else:
 		# We want the character to immediately change facing side when the player
 		# tries to change direction, during air control.
@@ -69,4 +69,5 @@ func _physics_process(delta):
 
 	if new_anim != anim:
 		anim = new_anim
+		sprite.play(anim)
 		#($Anim as AnimationPlayer).play(anim)
