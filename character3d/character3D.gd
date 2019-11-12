@@ -1,11 +1,11 @@
 extends KinematicBody
 
-const GRAVITY_VEC = Vector3(0, 1800, 0)
-const FLOOR_NORMAL = Vector3(0, -1, 0)
-const SLOPE_SLIDE_STOP = 100.0
-const WALK_SPEED = 500 # pixels/sec
-const JUMP_SPEED = 750
-const SIDING_CHANGE_SPEED = 10
+const GRAVITY_VEC = Vector3(0, -15, 0)
+const FLOOR_NORMAL = Vector3(0, 1, 0)
+const SLOPE_SLIDE_STOP = 5.0
+const WALK_SPEED = 5 # pixels/sec
+const JUMP_SPEED = -6
+const SIDING_CHANGE_SPEED = 1
 
 var linear_vel = Vector3()
 
@@ -62,7 +62,7 @@ func _physics_process(delta):
 		if Input.is_action_pressed("ui_right") and not Input.is_action_pressed("ui_left"):
 			sprite.scale.x = 1
 
-		if linear_vel.y < 0:
+		if linear_vel.y > 0:
 			new_anim = "jumping"
 		else:
 			new_anim = "falling"

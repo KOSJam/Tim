@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/platformPack_tile001.png-f4db2d4290d6ea8c17c6fe66deb51cc1.s3tc.stex"
-path.etc2="res://.import/platformPack_tile001.png-f4db2d4290d6ea8c17c6fe66deb51cc1.etc2.stex"
+path.s3tc="res://.import/plx-4.png-ff96e1b92fb8bfd22b2554ad3e43145c.s3tc.stex"
+path.etc2="res://.import/plx-4.png-ff96e1b92fb8bfd22b2554ad3e43145c.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/kenney platformer/Tiles/platformPack_tile001.png"
-dest_files=[ "res://.import/platformPack_tile001.png-f4db2d4290d6ea8c17c6fe66deb51cc1.s3tc.stex", "res://.import/platformPack_tile001.png-f4db2d4290d6ea8c17c6fe66deb51cc1.etc2.stex" ]
+source_file="res://assets/jungle asset pack/plx-4.png"
+dest_files=[ "res://.import/plx-4.png-ff96e1b92fb8bfd22b2554ad3e43145c.s3tc.stex", "res://.import/plx-4.png-ff96e1b92fb8bfd22b2554ad3e43145c.etc2.stex" ]
 
 [params]
 
@@ -25,7 +25,7 @@ flags/repeat=true
 flags/filter=true
 flags/mipmaps=true
 flags/anisotropic=false
-flags/srgb=1
+flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false

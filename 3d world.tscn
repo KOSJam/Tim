@@ -1,11 +1,17 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://character3d/character3D.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tiles3d/tile3d.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/jungle asset pack/plx-1.png" type="Texture" id=3]
+[ext_resource path="res://assets/jungle asset pack/plx-2.png" type="Texture" id=4]
+[ext_resource path="res://assets/jungle asset pack/plx-3.png" type="Texture" id=5]
+[ext_resource path="res://assets/jungle asset pack/plx-4.png" type="Texture" id=6]
+[ext_resource path="res://assets/jungle asset pack/plx-5.png" type="Texture" id=7]
 
 [node name="Spatial" type="Spatial"]
 
 [node name="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.589218, 0 )
 
 [node name="Spatial2" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.771568, 0 )
@@ -15,3 +21,26 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.632877, -0.771568, 0 )
 
 [node name="Spatial4" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0209, -0.305514, 0 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.756371, 0.224741, 0.614324, -0.636795, 0.467814, 0.612896, -0.149647, -0.854776, 0.496955, 13.9812, 9.3778, 0 )
+
+[node name="Layer1" type="Sprite3D" parent="."]
+transform = Transform( 100, 0, 0, 0, 100, 0, 0, 0, 1, 0, 0, -30 )
+texture = ExtResource( 3 )
+
+[node name="Layer2" type="Sprite3D" parent="."]
+transform = Transform( 100, 0, 0, 0, 30, 0, 0, 0, 1, 0, 0, -25 )
+texture = ExtResource( 4 )
+
+[node name="Layer3" type="Sprite3D" parent="."]
+transform = Transform( 100, 0, 0, 0, 25, 0, 0, 0, 1, 0, 0, -20 )
+texture = ExtResource( 5 )
+
+[node name="Layer4" type="Sprite3D" parent="."]
+transform = Transform( 100, 0, 0, 0, 20, 0, 0, 0, 1, 0, 0, -15 )
+texture = ExtResource( 6 )
+
+[node name="Layer5" type="Sprite3D" parent="."]
+transform = Transform( 100, 0, 0, 0, 15, 0, 0, 0, 1, 0, 0, -10 )
+texture = ExtResource( 7 )
